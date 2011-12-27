@@ -7,8 +7,8 @@
 
 */
 
-//#include<iostream>
-#include "army_classes.h"
+#include<iostream>
+#include "Soldier.h"
 
 using namespace std;
 
@@ -26,14 +26,14 @@ int main()
 
 	red.setOrders(&dummy, 1);
 
-	int done_Flag = dummy.getStatus();
+	SOLIDER_STATUS done_Flag = dummy.getStatus();
 	bool dest_Flag = 0;
 	int wounds;
 	Location dummy_loc = dummy.getPlace();
 
 
 
-	while(done_Flag == 1)
+	while(done_Flag != SOLDIER_DYING)
 	{
 
 		if(dest_Flag == 0)
